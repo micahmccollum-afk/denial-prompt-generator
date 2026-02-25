@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Denial Prompt Generator",
+  title: "Macros Database",
   description: "Dashboard for Data Review team to generate denial reasons for agent submissions",
   icons: {
     icon: "/favicon.png",

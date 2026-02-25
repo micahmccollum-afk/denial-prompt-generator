@@ -39,7 +39,7 @@ export function Dashboard() {
           <div className="h-6 w-px bg-white/40" aria-hidden />
           <div>
             <h1 className="text-xl font-semibold tracking-tight drop-shadow-sm">
-              Denial Prompt Generator
+              Macros Database
             </h1>
             <p className="mt-0.5 text-sm text-white/90">
               Select a denial prompt or keyword, then copy the reason to send to agents.

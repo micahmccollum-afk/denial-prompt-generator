@@ -227,7 +227,7 @@ export default function AdminPage() {
             </Link>
             <div>
               <h1 className="text-xl font-semibold tracking-tight drop-shadow-sm">
-                Admin – Denial Prompts
+                Admin – Macros Database
               </h1>
               <p className="mt-0.5 text-sm text-white/90">
                 Add and edit denial prompts sent to crowd users.
