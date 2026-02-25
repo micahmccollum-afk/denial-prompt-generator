@@ -27,7 +27,11 @@ const config: Config = {
           "dark-muted": "#a3a8bb",
           "dark-border": "#222436",
           "dark-primary": "#9C77EA",
+          "tech-accent": "#00d4aa",
         },
+      },
+      animation: {
+        "glow": "glow-pulse 3s ease-in-out infinite",
       },
     },
   },

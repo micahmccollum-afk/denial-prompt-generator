@@ -188,7 +188,7 @@ export default function AdminPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-storesight-background dark:bg-storesight-dark-bg">
+      <div className="tech-grid flex min-h-screen items-center justify-center bg-storesight-background dark:bg-storesight-dark-bg">
         <p className="text-storesight-text dark:text-storesight-dark-text">
           Loading…
         </p>
@@ -198,7 +198,7 @@ export default function AdminPage() {
 
   if (error && !data) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-storesight-background dark:bg-storesight-dark-bg">
+      <div className="tech-grid flex min-h-screen flex-col items-center justify-center gap-4 bg-storesight-background dark:bg-storesight-dark-bg">
         <p className="text-red-600 dark:text-red-400">{error}</p>
         <button
           onClick={fetchPrompts}
@@ -211,8 +211,8 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="shrink-0 bg-storesight-banner px-6 py-5 text-white shadow-sm">
+    <div className="flex min-h-screen flex-col tech-grid">
+      <header className="shrink-0 bg-gradient-to-r from-storesight-banner via-purple-700 to-indigo-900 px-6 py-5 text-white shadow-xl">
         <div className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/" className="flex items-center gap-4">
@@ -221,12 +221,12 @@ export default function AdminPage() {
                 alt="Storesight"
                 width={120}
                 height={27}
-                className="h-7 w-auto"
+                className="h-7 w-auto drop-shadow-sm"
               />
-              <div className="h-6 w-px bg-white/30" aria-hidden />
+              <div className="h-6 w-px bg-white/40" aria-hidden />
             </Link>
             <div>
-              <h1 className="text-xl font-semibold tracking-tight">
+              <h1 className="text-xl font-semibold tracking-tight drop-shadow-sm">
                 Admin – Denial Prompts
               </h1>
               <p className="mt-0.5 text-sm text-white/90">
@@ -237,7 +237,7 @@ export default function AdminPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="rounded-md border border-white/40 px-3 py-1.5 text-sm hover:bg-white/10"
+              className="rounded-lg border border-white/40 bg-white/5 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all hover:bg-white/15 hover:border-white/60"
             >
               ← Back to Generator
             </Link>

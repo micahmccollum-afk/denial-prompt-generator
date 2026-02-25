@@ -27,10 +27,10 @@ export function CopyButton({ text, disabled = false, className = "" }: CopyButto
       type="button"
       onClick={handleCopy}
       disabled={disabled}
-      className={`inline-flex shrink-0 items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-storesight-ring focus:ring-offset-2 focus:ring-offset-storesight-background dark:focus:ring-offset-storesight-dark-bg disabled:cursor-not-allowed disabled:opacity-50 ${className} ${
+      className={`inline-flex shrink-0 items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-storesight-ring focus:ring-offset-2 focus:ring-offset-storesight-background dark:focus:ring-offset-storesight-dark-bg disabled:cursor-not-allowed disabled:opacity-50 ${className} ${
         copied
-          ? "bg-green-600 text-white"
-          : "bg-storesight-primary text-white hover:bg-storesight-banner dark:bg-storesight-dark-primary dark:hover:bg-storesight-primary"
+          ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
+          : "bg-gradient-to-r from-storesight-primary to-storesight-banner text-white shadow-md hover:shadow-lg hover:shadow-storesight-primary/30 dark:from-storesight-dark-primary dark:to-storesight-primary"
       }`}
     >
       {copied ? (

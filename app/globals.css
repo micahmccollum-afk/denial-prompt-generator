@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Storesight brand colors (Unofficial Style Guide) */
+/* Storesight brand + high-tech accent colors */
 :root {
   --storesight-primary: #6D36FF;
   --storesight-primary-light: #ECE5FF;
@@ -14,4 +14,50 @@
   --storesight-card: #ffffff;
   --storesight-ring: #9C77EA;
   --storesight-destructive: #D60046;
+  --tech-accent: #00d4aa;
+  --tech-glow: rgba(0, 212, 170, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+  --glass-bg: rgba(20, 22, 32, 0.6);
+  --glass-border: rgba(110, 54, 255, 0.2);
+}
+
+/* Subtle tech grid background */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(110, 54, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 54, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .tech-grid {
+  background-image:
+    linear-gradient(rgba(0, 212, 170, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 170, 0.04) 1px, transparent 1px);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Subtle glow animation */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(110, 54, 255, 0.15); }
+  50% { box-shadow: 0 0 30px rgba(110, 54, 255, 0.25); }
+}
+
+/* Selection highlight glow */
+.glow-border {
+  box-shadow: 0 0 0 1px rgba(110, 54, 255, 0.4), 0 0 24px rgba(110, 54, 255, 0.1);
+}
+
+.dark .glow-border {
+  box-shadow: 0 0 0 1px rgba(157, 119, 234, 0.5), 0 0 24px rgba(0, 212, 170, 0.08);
 }

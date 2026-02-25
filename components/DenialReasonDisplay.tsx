@@ -17,7 +17,7 @@ export function DenialReasonDisplay({ text }: DenialReasonDisplayProps) {
 
   if (text === null) {
     return (
-      <div className="flex min-h-[200px] flex-1 flex-col items-center justify-center rounded-lg border border-storesight-border dark:border-storesight-dark-border bg-storesight-primary-light/30 dark:bg-storesight-dark-card p-6 text-center text-storesight-text-muted dark:text-storesight-dark-muted">
+      <div className="glass-card flex min-h-[80px] flex-col items-start justify-start rounded-xl px-4 py-4 text-left text-storesight-text-muted dark:text-storesight-dark-muted">
         Select a denial prompt or keyword to see the denial reason
       </div>
     );
@@ -25,7 +25,7 @@ export function DenialReasonDisplay({ text }: DenialReasonDisplayProps) {
 
   return (
     <div className="flex flex-col space-y-4">
-      <div className="max-h-[320px] min-h-[200px] overflow-y-auto rounded-lg border border-storesight-border dark:border-storesight-dark-border bg-storesight-card dark:bg-storesight-dark-card p-4 shadow-sm">
+      <div className="glass-card max-h-[320px] min-h-[200px] overflow-y-auto rounded-xl p-4 shadow-lg dark:shadow-storesight-dark-border/20">
         <textarea
           value={editableText}
           onChange={(e) => setEditableText(e.target.value)}

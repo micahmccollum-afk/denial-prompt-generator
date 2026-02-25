@@ -24,21 +24,21 @@ export function Dashboard() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="shrink-0 bg-storesight-banner px-6 py-5 text-white shadow-sm">
-        <div className="mx-auto flex max-w-[1800px] w-full flex-wrap items-center justify-between gap-4">
+    <div className="flex min-h-screen flex-col tech-grid">
+      <header className="shrink-0 relative overflow-hidden bg-gradient-to-r from-storesight-banner via-purple-700 to-indigo-900 px-6 py-5 text-white shadow-xl">
+        <div className="relative mx-auto flex max-w-[1800px] w-full flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-4">
           <Image
             src="/logo-storesight-white.svg"
             alt="Storesight"
             width={120}
             height={27}
-            className="h-7 w-auto"
+            className="h-7 w-auto drop-shadow-sm"
             priority
           />
-          <div className="h-6 w-px bg-white/30" aria-hidden />
+          <div className="h-6 w-px bg-white/40" aria-hidden />
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">
+            <h1 className="text-xl font-semibold tracking-tight drop-shadow-sm">
               Denial Prompt Generator
             </h1>
             <p className="mt-0.5 text-sm text-white/90">
@@ -49,7 +49,7 @@ export function Dashboard() {
           <div className="flex items-center gap-3">
             <Link
               href="/admin"
-              className="rounded-md border border-white/40 px-3 py-1.5 text-sm hover:bg-white/10"
+              className="rounded-lg border border-white/40 bg-white/5 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all hover:bg-white/15 hover:border-white/60"
             >
               Admin
             </Link>
@@ -66,7 +66,7 @@ export function Dashboard() {
         ) : (
           <>
             <section className="flex min-h-0 min-w-0 flex-1 flex-col">
-              <h2 className="mb-3 text-sm font-semibold text-storesight-text dark:text-storesight-dark-text">
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-storesight-text dark:text-storesight-dark-text">
                 Select keyword or prompt
               </h2>
               <KeywordSelector
@@ -77,7 +77,7 @@ export function Dashboard() {
             </section>
 
             <section className="flex min-w-0 flex-1 flex-col">
-              <h2 className="mb-3 text-sm font-semibold text-storesight-text dark:text-storesight-dark-text">
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-storesight-text dark:text-storesight-dark-text">
                 Denial reason
               </h2>
               <DenialReasonDisplay text={selectedKeyword?.template ?? null} />
