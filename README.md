@@ -56,3 +56,4 @@ Admin edits will be stored in Firestore and persist across deploys. Without Fire
 ## Local without Firebase
 
 Without Firebase env vars, the app uses `data/denial-prompts.json` for storage. Admin edits work locally. Add `.env.local` with the Firebase vars to use Firestore locally.
+# storesight-denial-generator
