@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Storesight brand colors (Unofficial Style Guide) */
+:root {
+  --storesight-primary: #6D36FF;
+  --storesight-primary-light: #ECE5FF;
+  --storesight-banner: #4E339C;
+  --storesight-text: #1a1a2e;
+  --storesight-text-muted: #6b7280;
+  --storesight-border: #e2e0f0;
+  --storesight-background: #F4F9FF;
+  --storesight-card: #ffffff;
+  --storesight-ring: #9C77EA;
+  --storesight-destructive: #D60046;
+}

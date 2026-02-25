@@ -1,0 +1,199 @@
+{
+  "categories": [
+    {
+      "id": "photo-capture",
+      "label": "Photo & Capture Issues",
+      "keywords": [
+        {
+          "id": "incorrect-section-not-captured",
+          "label": "Incorrect Section Captured",
+          "template": "Thank you for your submission—we appreciate the time you took to complete this job. Unfortunately, we weren't able to approve it this time. We noticed you indicated the section could not be found, but it appears visible in your alternate photo. To get approved on future jobs, please be sure to capture the specific requested section exactly as the instructions describe. We know store layouts can be tricky; taking a moment to double-check before submitting really helps. We look forward to approving your next submission."
+        },
+        {
+          "id": "incorrect-photo-type",
+          "label": "Incorrect Photo Type (Close-Up Instead of Overview)",
+          "template": "We appreciate you completing this job and submitting your photos. Unfortunately, we couldn't approve this submission because the job required overview photos, but only close-up images were provided. Overview shots help us see the full context of the shelf or display. When you retake or submit future jobs, please make sure to capture the broader view as instructed. Thank you for your effort—we're confident the next one will meet requirements."
+        },
+        {
+          "id": "wrong-display-captured",
+          "label": "Wrong Display Captured",
+          "template": "Thank you for taking the time to complete this job. We weren't able to approve your submission because the specific display requested in the instructions wasn't captured in your photos. It's easy to mix up displays when there are several in the area. For your next attempt, please review the job instructions carefully and ensure you're photographing the exact display or location specified. We appreciate your work and hope the next submission goes through smoothly."
+        },
+        {
+          "id": "incorrect-battery-display",
+          "label": "Incorrect Battery Display",
+          "template": "We appreciate your submission and the effort you put into this job. Unfortunately, we couldn't approve it because the correct battery display was not captured. Battery sections can look similar, so we understand the confusion. When you're at the store next time, please take a moment to verify you're photographing the specific battery display listed in the job instructions. We look forward to approving your next submission."
+        },
+        {
+          "id": "missing-alternate-photos",
+          "label": "Missing Alternate Photos",
+          "template": "Thank you for your submission. We value the work you do for us. Unfortunately, we weren't able to approve this job because the required alternate photos were not included. Alternate photos help us verify the location and product when the primary view isn't enough. Please refer to the job instructions for the full list of required photos and make sure each one is captured before submitting. We're here to help—feel free to reach out if anything in the instructions is unclear."
+        },
+        {
+          "id": "blurry-photos",
+          "label": "Blurry Photos",
+          "template": "We appreciate you completing this job and understand that photo quality can be affected by lighting or movement. Unfortunately, we couldn't approve your submission because the photos need to be clear and readable for our review. A quick tip: holding your phone steady for a second before tapping capture, or ensuring good lighting, usually makes a big difference. We'd love to approve your next submission—just a little extra care with clarity will get you there."
+        },
+        {
+          "id": "angled-photos",
+          "label": "Angled Photos",
+          "template": "Thank you for your submission—we know getting the right angle isn't always easy in a busy store. Unfortunately, we weren't able to approve this job because the photos need to be taken straight on, rather than at an angle. Straight-on shots give us the clearest view of the shelf and products. When you retake or do your next job, please position your camera directly in front of the subject. We appreciate your attention to this and look forward to your next submission."
+        },
+        {
+          "id": "photo-framing-too-wide",
+          "label": "Photo Framing Too Wide",
+          "template": "We appreciate the time you spent on this job. Unfortunately, we couldn't approve your submission because the photos were taken from too far away and included excessive floor or background space. Our review needs a closer, more focused view of the shelf or display. For future submissions, try standing a bit closer so the product or shelf fills more of the frame. Thank you for your effort—we're confident your next photos will meet the standard."
+        },
+        {
+          "id": "duplicate-photos-submitted",
+          "label": "Duplicate Photos Submitted",
+          "template": "Thank you for completing this job and submitting your photos. Unfortunately, we weren't able to approve it because duplicate images were provided instead of unique shots for each required photo. We know it can be easy to mix up files when you're submitting several at once. For your next submission, please double-check that each photo is distinct and matches the requirements in the instructions. We appreciate your work and look forward to approving you next time."
+        },
+        {
+          "id": "multiple-pallets-in-one-photo",
+          "label": "Multiple Pallets in One Photo",
+          "template": "We appreciate you taking on this job. Unfortunately, we couldn't approve your submission because the instructions require each pallet to be photographed individually, and we received a single photo with multiple pallets. Individual photos help us track and verify each pallet correctly. When you retake or do similar jobs in the future, please capture one clear photo per pallet. Thank you for your effort—we know the next one will be spot on."
+        }
+      ]
+    },
+    {
+      "id": "job-completion",
+      "label": "Job Completion & Instructions",
+      "keywords": [
+        {
+          "id": "job-not-completed-as-instructed",
+          "label": "Job Not Completed as Instructed",
+          "template": "Thank you for your submission. We appreciate the effort you put in. Unfortunately, we couldn't approve this job because it wasn't completed exactly as the instructions specified. To receive credit, we need each step and requirement to be followed as written. We understand instructions can sometimes be confusing—if you have questions on future jobs, please reach out before submitting. We're rooting for you and look forward to approving your next compliant submission."
+        },
+        {
+          "id": "job-completed-too-quickly",
+          "label": "Job Completed Too Quickly",
+          "template": "We appreciate you taking the time to work on this job. Unfortunately, we weren't able to approve your submission because the completion time suggests the job may not have been performed as thoroughly as required. We rely on accurate, detailed data, and that takes a bit of time to collect properly. For future jobs, please allow enough time to visit the location, complete all steps, and capture each required photo. Thank you for your understanding—we look forward to approving your next thorough submission."
+        },
+        {
+          "id": "product-unavailable-job-not-canceled",
+          "label": "Product Unavailable – Job Not Canceled",
+          "template": "Thank you for attempting this job. We know it's frustrating when a product isn't available. Unfortunately, we couldn't approve your submission because when a product is unavailable, the job needs to be canceled through the app rather than submitted. This helps us keep our records accurate and ensures you're not penalized. For future situations like this, please use the cancel option and note the reason. We appreciate you following this process next time."
+        },
+        {
+          "id": "store-closed-job-not-canceled",
+          "label": "Store Closed – Job Not Canceled",
+          "template": "We appreciate you trying to complete this job. Unfortunately, we couldn't approve your submission because the store was closed at the time, and in that case the job must be canceled through the app. We don't want you to lose credit or time when circumstances are out of your control. Please use the cancel option when a store is closed and select the appropriate reason. Thank you for your understanding—we look forward to approving your next completed job."
+        }
+      ]
+    },
+    {
+      "id": "location-store",
+      "label": "Location & Store",
+      "keywords": [
+        {
+          "id": "wrong-store-visited",
+          "label": "Wrong Store Visited",
+          "template": "Thank you for your submission—we appreciate you getting out to complete this job. Unfortunately, we weren't able to approve it because the job must be completed at the specific retailer and location listed in the instructions. Visiting the wrong store is an easy mistake when locations are close together. For your next job, please double-check the store address and retailer name before you head out. We look forward to approving your next submission from the correct location."
+        },
+        {
+          "id": "incorrect-gps-location",
+          "label": "Incorrect GPS Location",
+          "template": "We appreciate the effort you put into this job. Unfortunately, we couldn't approve your submission because our GPS data shows the photos weren't taken at the requested store location. Accurate location verification is important for the data we collect. If you had trouble with GPS or location services, try enabling them before you arrive and ensuring the app has permission. We look forward to approving your next submission from the correct location."
+        },
+        {
+          "id": "photos-not-taken-in-store",
+          "label": "Photos Not Taken In Store",
+          "template": "Thank you for your submission. Unfortunately, we weren't able to approve this job because the photos need to be taken at the physical store location. We rely on in-store imagery for accurate, real-time data. For future jobs, please make sure to capture all required photos while you're at the specified store. We appreciate your understanding and look forward to approving your next in-store submission."
+        }
+      ]
+    },
+    {
+      "id": "display-product",
+      "label": "Display & Product",
+      "keywords": [
+        {
+          "id": "endcap-vs-aisle-confusion",
+          "label": "Endcap vs Aisle Confusion",
+          "template": "Thank you for completing this job—we know the difference between endcaps and in-aisle displays can be subtle. Unfortunately, we couldn't approve your submission because the requested displays were on an endcap, not in the aisle, and the job required endcap photo instructions to be followed. For your next visit, please check whether the display is at the end of an aisle (endcap) or within the aisle, and use the correct instructions. We appreciate your attention to this and look forward to your next submission."
+        },
+        {
+          "id": "cooler-doors-closed",
+          "label": "Cooler Doors Closed",
+          "template": "We appreciate you taking on this job. Unfortunately, we weren't able to approve your submission because cooler photos must be taken with the doors open so we can see the products and placement. We know it can feel awkward to open doors, but it's required for our verification. When you retake or do similar jobs, please open the cooler doors before capturing the photos. Thank you for your effort—we're confident the next submission will meet the requirement."
+        },
+        {
+          "id": "item-marked-missing-but-visible",
+          "label": "Item Marked Missing but Visible",
+          "template": "Thank you for your submission and for checking the shelf. Unfortunately, we couldn't approve this job because the item you marked as missing actually appears visible in your photo. It's possible it was in a different spot than expected or partially obscured. For future submissions, please take a careful look at the full photo before marking items as missing. We appreciate your attention to detail and look forward to approving your next submission."
+        },
+        {
+          "id": "product-not-opened",
+          "label": "Product Not Opened",
+          "template": "We appreciate you completing this job. Unfortunately, we weren't able to approve your submission because this job required an image of the product with its packaging opened. Opened product photos help us verify specific details. When you retake or do similar jobs, please follow the instructions to open the product and capture the required view. Thank you for your understanding—we look forward to your next submission."
+        },
+        {
+          "id": "incorrect-item-number",
+          "label": "Incorrect Item Number",
+          "template": "Thank you for your submission—we know item numbers can be easy to mix up. Unfortunately, we couldn't approve this job because the item number in your submission doesn't match the one requested in the instructions. For future jobs, please double-check the UPC, SKU, or item number against the job details before submitting. We appreciate your care and look forward to approving your next accurate submission."
+        },
+        {
+          "id": "incorrect-product-found",
+          "label": "Incorrect Product Found",
+          "template": "We appreciate the effort you put into finding and photographing this product. Unfortunately, we weren't able to approve your submission because the product in your photos doesn't match the one specified in the job instructions. Similar packaging or nearby products can be confusing. For your next submission, please verify the brand, size, and any identifying details before capturing. Thank you—we look forward to approving you next time."
+        },
+        {
+          "id": "wrong-product-category",
+          "label": "Wrong Product Category",
+          "template": "Thank you for completing this job. Unfortunately, we couldn't approve your submission because the photos don't match the requested product category. It's easy to grab the wrong aisle or section when categories are adjacent. For future jobs, please confirm you're in the correct category (e.g., dairy, produce, snacks) as listed in the instructions. We appreciate your attention and look forward to your next submission."
+        },
+        {
+          "id": "incomplete-shelf-coverage",
+          "label": "Incomplete Shelf Coverage",
+          "template": "We appreciate you taking the time to photograph this shelf. Unfortunately, we weren't able to approve your submission because we need to see the full shelf from top to bottom. Incomplete coverage makes it hard for us to verify placement and availability. When you retake or do similar jobs, please capture the entire vertical section in frame. Thank you for your effort—we're confident your next submission will meet the requirement."
+        },
+        {
+          "id": "overlapping-sections",
+          "label": "Overlapping Sections",
+          "template": "Thank you for your submission. Unfortunately, we couldn't approve this job because the photos overlap and duplicate product coverage. We need distinct sections so we don't count the same products twice. For future submissions, please ensure each photo covers a unique section without overlapping the previous one. We appreciate your attention to this and look forward to approving your next submission."
+        },
+        {
+          "id": "item-photographed-in-hand",
+          "label": "Item Photographed in Hand",
+          "template": "We appreciate you finding and photographing the product. Unfortunately, we couldn't approve your submission because items need to be photographed on the shelf in their actual retail location, not held in hand. This helps us verify placement and availability. When you retake or do similar jobs, please capture the product while it's still on the shelf. Thank you for your understanding—we look forward to your next submission."
+        },
+        {
+          "id": "insufficient-displays-captured",
+          "label": "Insufficient Displays Captured",
+          "template": "Thank you for your submission. Unfortunately, we weren't able to approve this job because not all of the required displays were captured. The instructions list each display we need to see. For your next visit, please go through the list and ensure you have a photo of every required display before submitting. We appreciate your thoroughness and look forward to approving your next complete submission."
+        },
+        {
+          "id": "incorrect-display-depth",
+          "label": "Incorrect Display Depth",
+          "template": "We appreciate you completing this job. Unfortunately, we couldn't approve your submission because the display depth was labeled incorrectly. Getting the depth right helps us understand how products are merchandised. For future jobs, please review the depth options in the instructions and match them to what you're seeing. Thank you for your attention—we look forward to approving your next submission."
+        },
+        {
+          "id": "4-way-display-incomplete",
+          "label": "4-Way Display Incomplete",
+          "template": "Thank you for photographing this display. Unfortunately, we weren't able to approve your submission because all four sides of the 4-way display need to be captured. We need to see each face to get a complete picture. When you retake or do similar jobs, please walk around the display and photograph every side. We appreciate your effort and look forward to your next complete submission."
+        },
+        {
+          "id": "displays-not-captured",
+          "label": "Displays Not Captured",
+          "template": "We appreciate your submission. Unfortunately, we couldn't approve this job because it required display photos, but only in-aisle photos were provided. Displays (endcaps, floor stacks, etc.) are different from standard shelf shots. Please refer to the job instructions for which displays to capture and ensure you photograph each one. Thank you for your attention—we look forward to approving your next submission."
+        }
+      ]
+    },
+    {
+      "id": "policy-compliance",
+      "label": "Policy & Compliance",
+      "keywords": [
+        {
+          "id": "customer-or-self-in-photo",
+          "label": "Customer or Self in Photo",
+          "template": "Thank you for your submission. We appreciate the work you do. Unfortunately, we couldn't approve this job because our policy requires that photos must not include people—whether customers, staff, or yourself. This protects privacy and keeps our data consistent. When you retake or do future jobs, please wait for a clear moment or adjust your angle so no one appears in the frame. We understand this can be tricky in busy stores—thank you for your cooperation."
+        },
+        {
+          "id": "agent-does-not-meet-qualifications",
+          "label": "Agent Does Not Meet Qualifications",
+          "template": "Thank you for your interest in this job. Unfortunately, we weren't able to approve your submission because it doesn't meet the qualifications required for this particular job. Qualification requirements help us match the right tasks to the right people and ensure quality. We encourage you to check the job details before claiming and to look for other jobs that fit your profile. We appreciate your understanding and hope to work with you on a qualifying job soon."
+        }
+      ]
+    }
+  ]
+}
