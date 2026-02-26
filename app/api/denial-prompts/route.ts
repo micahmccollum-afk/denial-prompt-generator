@@ -55,7 +55,7 @@ function validateSchema(body: unknown): body is DenialPromptsSchema {
   return true;
 }
 
-export async function PUT(request: Request) {
+async function handleSave(request: Request) {
   try {
     const body = await request.json();
     if (!validateSchema(body)) {
@@ -66,15 +66,28 @@ export async function PUT(request: Request) {
     }
 
     if (isFirebaseConfigured()) {
-      const ok = await setPromptsInFirestore(body);
-      if (ok) return NextResponse.json({ success: true });
+      const result = await setPromptsInFirestore(body);
+      if (result.ok) return NextResponse.json({ success: true });
       return NextResponse.json(
-        { error: "Failed to save to Firestore" },
+        { error: result.error ?? "Failed to save to Firestore" },
         { status: 500 }
       );
     }
 
-    await fs.writeFile(DATA_PATH, JSON.stringify(body, null, 2), "utf-8");
+    const dataDir = path.dirname(DATA_PATH);
+    await fs.mkdir(dataDir, { recursive: true }).catch(() => {});
+    try {
+      await fs.writeFile(DATA_PATH, JSON.stringify(body, null, 2), "utf-8");
+    } catch (writeErr) {
+      const code = writeErr instanceof Error && "code" in writeErr ? (writeErr as NodeJS.ErrnoException).code : null;
+      if (code === "EROFS" || code === "EACCES") {
+        return NextResponse.json(
+          { error: "Cannot write to filesystem. If deployed (e.g. Vercel), add Firebase env vars to enable saves." },
+          { status: 500 }
+        );
+      }
+      throw writeErr;
+    }
     return NextResponse.json({ success: true });
   } catch (err) {
     const message =
@@ -85,4 +98,12 @@ export async function PUT(request: Request) {
       { status: 500 }
     );
   }
+}
+
+export async function PUT(request: Request) {
+  return handleSave(request);
+}
+
+export async function POST(request: Request) {
+  return handleSave(request);
 }
