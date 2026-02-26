@@ -5,10 +5,25 @@ import type { DenialPromptsSchema } from "./denialPrompts";
 const COLLECTION = "config";
 const DOC_ID = "denial-prompts";
 
+function getPrivateKey(): string | null {
+  const base64 = process.env.FIREBASE_PRIVATE_KEY_BASE64;
+  if (base64) {
+    try {
+      return Buffer.from(base64, "base64").toString("utf-8");
+    } catch {
+      return null;
+    }
+  }
+  const raw = process.env.FIREBASE_PRIVATE_KEY;
+  if (!raw) return null;
+  // Literal \n (backslash + n) from single-line env vars - fixes DECODER routines::unsupported on Vercel
+  return raw.replace(/\\n/g, "\n");
+}
+
 function getFirebaseApp(): App | null {
   const projectId = process.env.FIREBASE_PROJECT_ID;
   const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
-  const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+  const privateKey = getPrivateKey();
 
   if (!projectId || !clientEmail || !privateKey) return null;
 
@@ -20,7 +35,7 @@ function getFirebaseApp(): App | null {
       credential: cert({
         projectId,
         clientEmail,
-        privateKey: privateKey.replace(/\\n/g, "\n"),
+        privateKey,
       }),
     });
   } catch {
@@ -62,6 +77,6 @@ export function isFirebaseConfigured(): boolean {
   return !!(
     process.env.FIREBASE_PROJECT_ID &&
     process.env.FIREBASE_CLIENT_EMAIL &&
-    process.env.FIREBASE_PRIVATE_KEY
+    (process.env.FIREBASE_PRIVATE_KEY || process.env.FIREBASE_PRIVATE_KEY_BASE64)
   );
 }

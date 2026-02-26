@@ -53,6 +53,8 @@ git push -u origin main
 
 Admin edits will be stored in Firestore and persist across deploys. Without Firebase env vars, admin edits will fail on Vercel (the filesystem is read-only).
 
+**If you see "DECODER routines::unsupported" or "Getting metadata from plugin failed":** Vercel may be mangling the private key. Use base64 instead: copy the `private_key` value from your service account JSON, base64-encode it (e.g. [base64encode.org](https://www.base64encode.org/)), and store the output in `FIREBASE_PRIVATE_KEY_BASE64` (remove `FIREBASE_PRIVATE_KEY`).
+
 ## Local without Firebase
 
 Without Firebase env vars, the app uses `data/denial-prompts.json` for storage. Admin edits work locally. Add `.env.local` with the Firebase vars to use Firestore locally.
