@@ -5,18 +5,26 @@ import type { DenialPromptsSchema } from "./denialPrompts";
 const COLLECTION = "config";
 const DOC_ID = "denial-prompts";
 
+const DEBUG = process.env.VERCEL === "1";
+
 function getPrivateKey(): string | null {
   const base64 = process.env.FIREBASE_PRIVATE_KEY_BASE64;
   if (base64) {
     try {
-      return Buffer.from(base64, "base64").toString("utf-8");
-    } catch {
+      const decoded = Buffer.from(base64, "base64").toString("utf-8");
+      if (DEBUG) console.log("[firestore] FIREBASE_PRIVATE_KEY_BASE64 decoded OK, length:", decoded.length);
+      return decoded;
+    } catch (e) {
+      if (DEBUG) console.error("[firestore] FIREBASE_PRIVATE_KEY_BASE64 decode failed:", e instanceof Error ? e.message : e);
       return null;
     }
   }
   const raw = process.env.FIREBASE_PRIVATE_KEY;
-  if (!raw) return null;
-  // Literal \n (backslash + n) from single-line env vars - fixes DECODER routines::unsupported on Vercel
+  if (!raw) {
+    if (DEBUG) console.log("[firestore] No FIREBASE_PRIVATE_KEY or FIREBASE_PRIVATE_KEY_BASE64");
+    return null;
+  }
+  if (DEBUG) console.log("[firestore] Using FIREBASE_PRIVATE_KEY (raw)");
   return raw.replace(/\\n/g, "\n");
 }
 
@@ -24,6 +32,14 @@ function getFirebaseApp(): App | null {
   const projectId = process.env.FIREBASE_PROJECT_ID;
   const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
   const privateKey = getPrivateKey();
+
+  if (DEBUG) {
+    console.log("[firestore] Env check:", {
+      projectId: projectId ? "set" : "MISSING",
+      clientEmail: clientEmail ? "set" : "MISSING",
+      privateKey: privateKey ? "set" : "MISSING",
+    });
+  }
 
   if (!projectId || !clientEmail || !privateKey) return null;
 
@@ -38,7 +54,8 @@ function getFirebaseApp(): App | null {
         privateKey,
       }),
     });
-  } catch {
+  } catch (err) {
+    if (DEBUG) console.error("[firestore] initializeApp failed:", err instanceof Error ? err.message : String(err));
     return null;
   }
 }
@@ -60,7 +77,7 @@ export async function setPromptsInFirestore(
   data: DenialPromptsSchema
 ): Promise<{ ok: true } | { ok: false; error: string }> {
   const app = getFirebaseApp();
-  if (!app) return { ok: false, error: "Firebase not configured. Check FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY." };
+  if (!app) return { ok: false, error: "Firebase not configured. Check FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY or FIREBASE_PRIVATE_KEY_BASE64." };
 
   try {
     const db = getFirestore(app);
